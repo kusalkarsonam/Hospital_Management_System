@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <style>
+      * {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+:root {
+  --main-color: #fff;
+  --second-color: #347deb;
+  --box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  --facebook-color: rgb(60, 90, 154);
+  --google-color: rgb(220, 74, 61);
+}
+
+html {
+  height: 100%;
+}
+body {
+  background-image: url(https://img.freepik.com/premium-vector/modern-abstract-shapes-postcard-brochure-cover-design-with-pastel-color-palette-gradient-background_29865-3129.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: sans-serif;
+}
+.login-sec{
+  background-image: url("https://img.freepik.com/premium-photo/there-is-picture-blue-pink-background-with-blurry-background-generative-ai_902338-27517.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: sans-serif;
+}
+
+#container {
+  position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: darkkhaki;
+    background-image: url(https://img.freepik.com/premium-photo/there-is-picture-blue-pink-background-with-blurry-background-generative-ai_902338-27517.jpg);
+    width: 1200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 800px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    box-shadow: var(--box-shadow);
+    transition-duration: 1s;
+}
+
+#left, #right {
+  margin: auto;
+  width: 95%;
+  height: 96%;
+  border-radius: 10px;
+}
+
+#left {
+  background-image: url("https://preclinic.dreamguystech.com/template/assets/img/login-02.png") !important;
+  background-size: cover;
+  background-position: center;
+  box-shadow: var(--box-shadow);
+}
+#welcome, #lorem {
+  margin: 20px;
+  text-shadow: var(--box-shadow);
+}
+#welcome {
+  font-size: 75px;
+  font-weight: 300;
+  margin-top: 330px;
+  text-shadow: var(--box-shadow);
+}
+
+#login {
+  /* padding-top: 35%; */
+  text-align: center;
+  
+  font-weight: 100;
+ 
+  color: rgb(0, 0, 0);
+  text-shadow: var(--box-shadow);
+}
+.client-info {
+  display: block;
+  margin: 20px auto;
+  width: 60%;
+  height: 50px;
+  border: solid #999 1px;
+  border-radius: 5px;
+  text-indent: 15px;
+  transition: all 200ms;
+  box-shadow: var(--box-shadow);
+}
+.client-info:focus {
+  width: 80%;
+}
+label {
+  position: absolute;
+  margin: -76px 130px;
+	font-size: 12px;
+	white-space: nowrap;
+	background: #fff;
+	padding: 0 5px;
+	color: #999;
+  transition: all 200ms;
+  text-shadow: var(--box-shadow);
+}
+#email:focus ~ label[for="email"] {
+  margin: -76px 70px;
+}
+#password:focus ~ label[for="password"] {
+  margin: -76px 70px;
+}
+#submit {
+  border: none;
+  background-color: #4610aa;
+  color: white;
+  width: 60%;
+}
+#submit:hover {
+  background-color: #010002;
+}
+
+.social {
+  background-color: #fff;
+  display: block;
+  margin: 10px auto;
+  width: 70%;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  transition-duration: 200ms;
+  box-shadow: var(--box-shadow);
+  text-shadow: var(--box-shadow);
+}
+#facebook {
+  border: solid var(--facebook-color) 1px;
+  color: var(--facebook-color);
+}
+#facebook:hover {
+  background-color: var(--facebook-color);
+  color: white;
+}
+#google {
+  border: solid var(--google-color) 1px;
+  color: var(--google-color);
+}
+#google:hover {
+  background-color: var(--google-color);
+  color: white;
+}
+
+@media (max-width: 1250px) {
+ 
+  #container {
+    width: 600px;
+    display: block;
+  }
+  #left {
+    display: none;
+  }
+  #right {
+    margin-top: 16px;
+    background-image: url("https://images.unsplash.com/photo-1615400014497-55726234cccb?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYxNzg4Njg0Ng&ixlib=rb-1.2.1&q=85");
+    background-size: cover;
+    background-position: center;
+    box-shadow: var(--box-shadow);
+  }
+  
+}
+
+@media (max-height: 850px) {
+ 
+  #container {
+    width: 1000px;
+    height: 600px;
+  }
+ 
+  #welcome {
+    margin-top: 240px;
+    font-size: 60px;
+  }
+  #lorem {
+    font-size: 15px;
+  }
+  
+}
+    </style>
+</head>
+
+<body>
+  <Section class="login-sec">
+
+    <div id="container" >
+        <div id="left" style="background-color: #d0b0ff;">
+   
+        </div>
+        <div id="right">
+          <h5 id="login">Login</h5><br>
+      
+          <form (ngSubmit)="login()" #loginForm="ngForm">
+          <div style="    display: flex;">
+            <button  class="client-info">Admin</button>
+            <button  class="client-info">Doctor</button>
+            <button  class="client-info">Patient</button>
+          </div>
+          </form>
+          <input type="email" id="email" class="client-info" id="email" name="email" 
+          [(ngModel)]="patient.emailId" required>
+          <label for="email">Email</label>
+          <input type="password" class="client-info"  id="password" name="password" 
+          [(ngModel)]="patient.password" required>
+          <label for="password">Password</label>
+          <input type="submit" id="submit" class="client-info" value="Submit">
+     <div>
+      <h6 style="text-align: center;">Don't Have a account ? </h6>
+        <button style="background-color: #9055ff;" type="button" id="login" (click)="register()" class="client-info">Register</button>
+
+     </div>  
+     <a routerLink="/admin-dashboard">
+
+      <button type="button" class="btn btn-primary"> dashboard</button> 
+    </a>
+
+        </div>
+      </div>
+      
+   
+  </Section>   
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</head>
+
+
+   
+<body>
+
+
+    <div class="container">
+        <div class="title">Registration</div>
+        <form #registerform="ngForm" (ngSubmit)="patientRegister()">
+          <div class="user__details">
+            <div class="input__box">
+              <span class="details">Full Name</span>
+              <input type="text" name="fullName" class="form-control" placeholder="Enter Full Name"
+                                [(ngModel)]="patient.fullName" required="" pattern="[A-Za-z]{1,32}"
+                                #patientname="ngModel" [class.is-invalid]="patientname.invalid && patientname.touched">
+            </div>
+         
+            <div class="input__box">
+              <span class="details">Email</span>
+              <input type="email" name="emailId" class="form-control" placeholder="Enter Email "
+              [(ngModel)]="patient.emailId" required=""
+              pattern="[A-Za-z0-9._%+-]{2,}@[a-zA-Z]{1,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})"
+              #email="ngModel" [class.is-invalid]="email.invalid&&email.touched" />
+            </div>
+            <div class="input__box">
+              <span class="details">Phone Number</span>
+              <input type="tel"  name="mobileNo" class="form-control"
+              placeholder="Phone Number" [(ngModel)]="patient.mobileNo" required=""
+              pattern="[789][0-9]{9}" #mobilenumber="ngModel"
+              [class.is-invalid]="mobilenumber.invalid&amp;&amp;mobilenumber.touched">
+            </div>
+            <div class="input__box">
+              <span class="details">Password</span>
+              <input type="password" name="passWord" class="form-control" placeholder="Enter Password"
+              [(ngModel)]="patient.password" required="" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+              title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"
+              #patientpassword="ngModel"
+              [class.is-invalid]="patientpassword.invalid&amp;&amp;patientpassword.touched">
+            </div>
+            <div class="input__box">
+              <span class="details">Confirm Password</span>
+              <input type="password" name="passWord" class="form-control" placeholder="Enter Password"
+              [(ngModel)]="patient.password" required="" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+              title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"
+              #patientpassword="ngModel"
+              [class.is-invalid]="patientpassword.invalid&amp;&amp;patientpassword.touched">
+            </div>
+            <div class="input__box">
+                <span for="quantity">Age</span>
+                <input  id="quantity" name="quantity" min="0" max="100" step="1" value="0"
+                type="number" name="Age" class="form-control" placeholder="Enter Age"
+                            [(ngModel)]="patient.age" required="" #patientage="ngModel"
+                            [class.is-invalid]="patientage.invalid&amp;&amp;patientage.touched">
+              </div>
+          </div>
+          <div class="gender__details">
+            <input type="radio" name="gender" id="dot-1">
+            <input type="radio" name="gender" id="dot-2">
+            <input type="radio" name="gender" id="dot-3">
+            <span class="gender__title">Gender</span>
+            <div class="category">
+              <label for="dot-1">
+                <span class="dot one"></span>
+                <span>Male</span>
+              </label>
+              <label for="dot-2">
+                <span class="dot two"></span>
+                <span>Female</span>
+              </label>
+              <label for="dot-3">
+                <span class="dot three"></span>
+                <span>Prefer not to say</span>
+              </label>
+            </div>
+          </div>
+          <div class="button">
+            <input type="submit" value="Register">
+          </div>
+
+          <a routerLink="/app-login">
+            <h6 style="text-align: center;"> Have a account ?
+            <button type="button" class="btn btn-primary"> Log In</button> </h6>
+          </a>
+     
+          
+        </form>
+      </div>
+
+
+
+</body>
+
+</html>
