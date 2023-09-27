@@ -8,12 +8,35 @@ import { RegisterComponent } from './register/register.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HomeComponent } from './home/home.component';
+import { PatientDashboardComponent } from './patient-dashboard/patient-dashboard.component';
+import { DoctorDashboardComponent } from './doctor-dashboard/doctor-dashboard.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { DoctorListHomeComponent } from './doctor-list-home/doctor-list-home.component';
+import { AppointmentComponent } from './appointment/appointment.component';
+import { DoctorListDashComponent } from './doctor-list-dash/doctor-list-dash.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { PatientListDashComponent } from './patient-list-dash/patient-list-dash.component';
+import { AppointmentListDashComponent } from './appointment-list-dash/appointment-list-dash.component';
+import { AddDoctorComponent } from './add-doctor/add-doctor.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
+    HomeComponent,
+    PatientDashboardComponent,
+    DoctorDashboardComponent,
+    AboutUsComponent,
+    DoctorListHomeComponent,
+    AppointmentComponent,
+    DoctorListDashComponent,
+    AdminDashboardComponent,
+    PatientListDashComponent,
+    AppointmentListDashComponent,
+    AddDoctorComponent
  
   ],
   imports: [
