@@ -23,17 +23,20 @@ export class PatientService {
     }
   
   public patient_Login(patient: Patient) { 
-      return this.httpClient.post(`${baseUrl}/patient/add`, patient)
+    console.log("inside patient login serive");
+      return this.httpClient.post(`${baseUrl}/patient/login`, patient)
 
     }
 
     public admin_Login(admin: Admin) { 
-      return this.httpClient.post(`${baseUrl}/admin/`, admin)
+      console.log("inside admin login service");
+      return this.httpClient.post(`${baseUrl}/admin/login`, admin)
 
     }
 
 
     public doctor_Login(doctor: Doctor) { 
+      console.log("inside doctor login service")
       return this.httpClient.post(`${baseUrl}/doctor/login/add`, doctor)
 
     }

@@ -14,7 +14,7 @@ import { Admin } from './Admin';
 export class LoginComponent implements OnInit{
   patient: Patient = new Patient("", "", "", "", 0, "");
   doctor: Doctor = new Doctor(0, "", "", "", "", "", 0);
-  admin: Admin = new Admin("","", "");
+  admin: Admin = new Admin("","");
   doctorStatus: boolean = false;
   patientStatus: boolean = false;
   adminStatus: boolean = false;
@@ -26,26 +26,34 @@ public register(){
 this.router.navigate(['/app-register']);
 }
   public doctorAsLogin() {
+    console.log("doctor login");
     this.patientService.doctor_Login(this.doctor).subscribe(
-    Response =>{
+    (Response) =>{
+      console.log(Response);
       alert("Login Success!");
+      if(Response != null)
       this.router.navigate(['/doctor-dashboard']);
       }, error => console.log("Something is wrong!"));//error is pre define obj
     }
 
     public adminAsLogin() {
+      console.log("admin login");
       this.patientService.admin_Login(this.admin).subscribe(
-        (response: any)  =>{
-        
+        (response)  =>{
+        console.log(response);
         alert("Login Success!");
         this.router.navigate(['/admin-dashboard']);
         }, error => console.log("Something is wrong!"));//error is pre define obj
       }
       public patientAsLogin() {
+        console.log("patient login");
         this.patientService.patient_Login(this.patient).subscribe(
-        Response =>{
+        (Response) =>{
+          console.log(Response);
+          if(Response != null){
           alert("Login Success!");
           this.router.navigate(['/patient-dashboard']);
+          }
           }, error => console.log("Something is wrong!"));//error is pre define obj
         }
 

@@ -63,9 +63,9 @@
                     <form (ngSubmit)="adminAsLogin()" #loginForm="ngForm">
     
     
-                        <input type="email" id="email" class="client-info" id="email" name="email"
-                            [(ngModel)]="admin.adminemailId"  placeholder="Admin User Name / Email id" required>
-                        <label for="email">Email</label>
+                        <input type="text" id="userName" class="client-info" name="email"
+                            [(ngModel)]="admin.userName"  placeholder="Admin User Name " required>
+                        <label for="userName">userName</label>
                         <input type="password" class="client-info" id="password" name="password"
                             [(ngModel)]="admin.password" placeholder="Admin password" required >
                         <label for="password">Password</label>
@@ -84,8 +84,8 @@
                     <form (ngSubmit)="doctorAsLogin()" #loginForm="ngForm">
     
     
-                        <input type="email" id="email" class="client-info" id="email" name="email"
-                            [(ngModel)]="doctor.email" placeholder="Doctor Username / Email Id" required>
+                        <input type="email" id="email" class="client-info" name="email"
+                            [(ngModel)]="doctor.email" placeholder="Doctor Email Id" required>
                         <label for="email">Email</label>
                         <input type="password" class="client-info" id="password" name="password"
                             [(ngModel)]="doctor.password" placeholder="Doctor Password" required>
@@ -105,8 +105,8 @@
                     <form (ngSubmit)="patientAsLogin()" #loginForm="ngForm">
     
     
-                        <input type="email" id="email" class="client-info" id="email" name="email"
-                            [(ngModel)]="patient.emailId" placeholder="Patient Username / Email Id" required>
+                        <input type="email" id="email" class="client-info" name="email"
+                            [(ngModel)]="patient.emailId" placeholder="Patient Email Id" required>
                         <label for="email">Email</label>
                         <input type="password" class="client-info" id="password" name="password"
                             [(ngModel)]="patient.password" placeholder="Patient Password" required>

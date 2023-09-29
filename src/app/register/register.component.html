@@ -17,8 +17,8 @@
         <div class="input__box">
           <span class="details">Full Name</span>
           <input type="text" name="fullName" class="form-control" placeholder="Enter Full Name"
-                            [(ngModel)]="patient.fullName" required="" pattern="[A-Za-z]{1,32}"
-                            #patientname="ngModel" [class.is-invalid]="patientname.invalid && patientname.touched">
+          [(ngModel)]="patient.fullName" required="" pattern="[A-Za-z]{1,32}"
+        #fullName="ngModel" [class.is-invalid]="fullName.invalid && fullName.touched">
         </div>
      
         <div class="input__box">
@@ -26,58 +26,42 @@
           <input type="email" name="emailId" class="form-control" placeholder="Enter Email "
           [(ngModel)]="patient.emailId" required=""
           pattern="[A-Za-z0-9._%+-]{2,}@[a-zA-Z]{1,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})"
-          #email="ngModel" [class.is-invalid]="email.invalid&&email.touched" />
+          #emailId="ngModel" [class.is-invalid]="emailId.invalid&&emailId.touched" />
         </div>
         <div class="input__box">
           <span class="details">Phone Number</span>
           <input type="tel"  name="mobileNo" class="form-control"
           placeholder="Phone Number" [(ngModel)]="patient.mobileNo" required=""
-          pattern="[789][0-9]{9}" #mobilenumber="ngModel"
-          [class.is-invalid]="mobilenumber.invalid&amp;&amp;mobilenumber.touched">
+          pattern="[789][0-9]{9}" #mobileNo="ngModel"
+          [class.is-invalid]="mobileNo.invalid&amp;&amp;mobileNo.touched">
         </div>
         <div class="input__box">
           <span class="details">Password</span>
           <input type="password" name="passWord" class="form-control" placeholder="Enter Password"
           [(ngModel)]="patient.password" required="" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
           title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"
-          #patientpassword="ngModel"
-          [class.is-invalid]="patientpassword.invalid&amp;&amp;patientpassword.touched">
+          #password="ngModel"
+          [class.is-invalid]="password.invalid&amp;&amp;password.touched">
         </div>
         <div class="input__box">
           <span class="details">Confirm Password</span>
           <input type="password" name="passWord" class="form-control" placeholder="Enter Password"
           [(ngModel)]="patient.password" required="" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
           title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"
-          #patientpassword="ngModel"
-          [class.is-invalid]="patientpassword.invalid&amp;&amp;patientpassword.touched">
+          #password="ngModel"
+          [class.is-invalid]="password.invalid&amp;&amp;password.touched">
         </div>
         <div class="input__box">
-            <span for="quantity">Age</span>
-            <input  id="quantity" name="quantity" min="0" max="100" step="1" value="0"
-            type="number" name="Age" class="form-control" placeholder="Enter Age"
-                        [(ngModel)]="patient.age" required="" #patientage="ngModel"
-                        [class.is-invalid]="patientage.invalid&amp;&amp;patientage.touched">
+            <span for="age">Age</span>
+            <input  id="age"  min="0" max="100" step="1" value="0"
+            type="number" name="age" class="form-control" placeholder="Enter Age"
+                        [(ngModel)]="patient.age" required="" #age="ngModel"
+                        [class.is-invalid]="age.invalid&amp;&amp;age.touched">
           </div>
       </div>
       <div class="gender__details">
-        <input type="radio" name="gender" id="dot-1">
-        <input type="radio" name="gender" id="dot-2">
-        <input type="radio" name="gender" id="dot-3">
-        <span class="gender__title">Gender</span>
-        <div class="category">
-          <label for="dot-1">
-            <span class="dot one"></span>
-            <span>Male</span>
-          </label>
-          <label for="dot-2">
-            <span class="dot two"></span>
-            <span>Female</span>
-          </label>
-          <label for="dot-3">
-            <span class="dot three"></span>
-            <span>Prefer not to say</span>
-          </label>
-        </div>
+        <input type="text" name="gender" id="gender"  [(ngModel)]="patient.gender">
+      
       </div>
       <div class="button">
         <input type="submit" value="Register">
@@ -88,7 +72,7 @@
         <button type="button" class="btn btn-primary"> Log In</button> </h6>
       </a>
  
-      
+      <p style="text-align: center !important; margin: auto;" >Return to <a routerLink="/home"> Home </a> </p>
     </form>
   </div>
 </body>
