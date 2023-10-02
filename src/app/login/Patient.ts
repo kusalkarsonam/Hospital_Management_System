@@ -6,6 +6,7 @@
     gender: String;
     age: number;
     password: String;
+    patientType: String;
 
     constructor(
         fullName: String,
@@ -13,7 +14,8 @@
         mobileNo: String,
         gender: String,
         age: number,
-        password: String) {
+        password: String,
+        patientType: String) {
 
 
         this.fullName = fullName;
@@ -22,12 +24,9 @@
         this.gender = gender;
         this.age = age;
         this.password = password;
+        this.patientType = patientType;
     }
 }
 
 
 
-
-//https://codeshare.io/K8k8xP
-
-//https://codeshare.io/K8k8xP

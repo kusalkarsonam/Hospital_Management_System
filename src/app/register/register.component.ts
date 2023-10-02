@@ -11,7 +11,7 @@ import { throwError } from 'rxjs';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-  patient: Patient = new Patient("", "", "", "", 0, "");
+  patient: Patient = new Patient("", "", "", "", 0, "","");
 
 
   ngOnInit(): void { }
@@ -36,6 +36,7 @@ export class RegisterComponent implements OnInit {
         (data: any) => {
           // Registration was successful, provide user feedback here
           console.log('Registration Successful!', data);
+          alert("Registration Successful......!");
           // You can redirect to the login page or show a success message
         }
       );

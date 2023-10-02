@@ -13,6 +13,7 @@ import { AppointmentListDashComponent } from './appointment-list-dash/appointmen
 import { AddDoctorComponent } from './add-doctor/add-doctor.component';
 import { PatientDashboardComponent } from './patient-dashboard/patient-dashboard.component';
 import { DoctorDashboardComponent } from './doctor-dashboard/doctor-dashboard.component';
+import { DoctorAppointmentListComponent } from './doctor-appointment-list/doctor-appointment-list.component';
 
 const routes: Routes = [ 
 { path : ''  ,  component :HomeComponent},
@@ -29,7 +30,7 @@ const routes: Routes = [
 {path: 'patient-list-dash', component:PatientListDashComponent},
 {path: 'appointment-list-dash', component:AppointmentListDashComponent},
 {path: 'add-doctor', component:AddDoctorComponent},
-
+{path: 'doctor-appointment-list', component:DoctorAppointmentListComponent}
 ];
 
 @NgModule({

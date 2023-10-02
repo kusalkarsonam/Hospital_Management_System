@@ -5,7 +5,9 @@ export class Doctor{
     email: String;
     specialization: String;
     education: String;
-    consultingFees: number;
+    mobileNo: String;
+    gender: String;
+    department: String;
 
     constructor(
     doctorId: number,
@@ -14,7 +16,10 @@ export class Doctor{
     email: String,
     specialization: String,
     education: String,
-    consultingFees: number) {
+    mobileNo: String,
+    gender: String,
+    department: String
+    ) {
 
     this.doctorId = doctorId;
     this.doctName = doctName;
@@ -22,7 +27,9 @@ export class Doctor{
     this.email = email;
     this.specialization = specialization;
     this.education = education;
-    this.consultingFees = consultingFees;
+    this.mobileNo = mobileNo;
+    this.gender = gender;
+    this.department = department;
     }
 
 }

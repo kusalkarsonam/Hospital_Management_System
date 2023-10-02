@@ -59,9 +59,21 @@
                         [class.is-invalid]="age.invalid&amp;&amp;age.touched">
           </div>
       </div>
-      <div class="gender__details">
-        <input type="text" name="gender" id="gender"  [(ngModel)]="patient.gender">
-      
+      <div class="input__box">
+        <span class="details">Gender</span>
+        <input type="gender" name="gender" class="form-control" placeholder="Enter Password"
+        [(ngModel)]="patient.gender" required="" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+        title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"
+        #gender="ngModel"
+        [class.is-invalid]="gender.invalid&amp;&amp;gender.touched">
+      </div>
+      <div class="input__box">
+        <span class="details">Patient Type</span>
+        <input type="patientType" name="patientType" class="form-control" placeholder="Enter Password"
+        [(ngModel)]="patient.patientType" required="" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+        title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"
+        #patientType="ngModel"
+        [class.is-invalid]="patientType.invalid&amp;&amp;patientType.touched">
       </div>
       <div class="button">
         <input type="submit" value="Register">

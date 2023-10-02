@@ -173,19 +173,20 @@
             
             
             
-            <tr role="row" class="odd">
-            <td class="sorting_1">
+            
+            <tr  *ngFor="let patient of patientList" class="sorting_1">
             <div class="form-check check-tables">
             <input class="form-check-input" type="checkbox" value="something">
             </div>
-            </td>
-            <td class="profile-image"><a href="profile.html"><img width="28" height="28" src="assets/img/profiles/avatar-01.jpg" class="rounded-circle m-r-5" alt=""> Andrea Lalema</a></td>
-            <td>Otolaryngology</td>
-            <td>Infertility</td>
-            <td>MBBS, MS</td>
-            <td><a href="javascript:;">+1 23 456890</a></td>
-            <td>example@email.com</td>
-            <td>01.10.2022</td>
+          
+            <td>{{patient.fullName}}</td>
+            <td><a href="javascript:;">{{patient.emailId}}</a></td>
+            <td>{{patient.mobileNo}}</td>
+            <td>{{patient.patientType}}</td>
+            <td>{{patient.gender}}</td>
+            <td>{{patient.age}}</td>
+            
+            
             <td class="text-end">
             <div class="dropdown dropdown-action">
             <a href="#" class="action-icon dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">

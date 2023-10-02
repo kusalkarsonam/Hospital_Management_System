@@ -19,6 +19,7 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { PatientListDashComponent } from './patient-list-dash/patient-list-dash.component';
 import { AppointmentListDashComponent } from './appointment-list-dash/appointment-list-dash.component';
 import { AddDoctorComponent } from './add-doctor/add-doctor.component';
+import { DoctorAppointmentListComponent } from './doctor-appointment-list/doctor-appointment-list.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { AddDoctorComponent } from './add-doctor/add-doctor.component';
     AdminDashboardComponent,
     PatientListDashComponent,
     AppointmentListDashComponent,
-    AddDoctorComponent
+    AddDoctorComponent,
+    DoctorAppointmentListComponent
  
   ],
   imports: [

@@ -12,8 +12,8 @@ import { Admin } from './Admin';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit{
-  patient: Patient = new Patient("", "", "", "", 0, "");
-  doctor: Doctor = new Doctor(0, "", "", "", "", "", 0);
+  patient: Patient = new Patient("", "", "", "", 0, "","");
+  doctor: Doctor = new Doctor(0, "", "", "", "","","","","");
   admin: Admin = new Admin("","");
   doctorStatus: boolean = false;
   patientStatus: boolean = false;
@@ -28,8 +28,9 @@ this.router.navigate(['/app-register']);
   public doctorAsLogin() {
     console.log("doctor login");
     this.patientService.doctor_Login(this.doctor).subscribe(
-    (Response) =>{
+    (Response:any) =>{
       console.log(Response);
+      sessionStorage.setItem('currentDoctor', Response);
       alert("Login Success!");
       if(Response != null)
       this.router.navigate(['/doctor-dashboard']);

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AddDoctorService } from '../add-doctor.service';
 
 @Component({
   selector: 'app-patient-list-dash',
@@ -6,5 +7,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./patient-list-dash.component.css']
 })
 export class PatientListDashComponent {
+
+  patientList:any;
+
+  constructor(private patientService:AddDoctorService){
+
+  }
+ 
+  ngOnInit(): void {
+    this.patientService.getAllPatients().subscribe(
+      (Response) => {
+        this.patientList=Response;
+      }
+     )
+ 
+  }
 
 }

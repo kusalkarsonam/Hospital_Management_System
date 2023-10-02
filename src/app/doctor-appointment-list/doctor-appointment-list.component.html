@@ -54,20 +54,20 @@
                                         alt>
                                 </span>
                                 <span style="font-weight: bolder; color: #2e37a4;">
-                                    Admin Dashboard
+                                    Doctor Dashboard
                                 </span>
                             </a>
 
                         </li>
-                        <li class="submenu">
+                        <!-- <li class="submenu">
                             <a routerLink="/doctor-list-dash"><span class="menu-side">
                                     <img src="https://preclinic.dreamguystech.com/template/assets/img/icons/menu-icon-02.svg"
                                         alt>
                                 </span> <span style="font-weight: bolder; color: #2e37a4;"> Doctors </span>
                             </a>
 
-                        </li>
-                        <li class="submenu">
+                        </li> -->
+                        <!-- <li class="submenu">
                             <a routerLink="/patient-list-dash"><span class="menu-side"><img
                                         src="https://preclinic.dreamguystech.com/template/assets/img/icons/menu-icon-03.svg"
                                         alt></span>
@@ -78,7 +78,7 @@
                                 <li><a href="edit-patient.html">Edit Patients</a></li>
                                 <li><a href="patient-profile.html">Patients Profile</a></li>
                             </ul>
-                        </li>
+                        </li> -->
 
                         <li class="submenu">
                             <a routerLink="/appointment-list-dash"><span class="menu-side"><img
@@ -104,7 +104,7 @@
 
                     </ul>
                     <div class="logout-btn">
-                        <a routerLink="/home"><span class="menu-side"><img
+                        <a (click)="logout()"><span class="menu-side"><img
                                     src="https://preclinic.dreamguystech.com/template/assets/img/icons/logout.svg"
                                     alt></span> <span>Logout</span></a>
                     </div>
@@ -118,7 +118,7 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <ul class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="doctors.html">Doctors </a></li>
+                                <li class="breadcrumb-item"><a href="doctors.html">Appointment </a></li>
                                 &nbsp; &nbsp;
                                 <svg xmlns="http://www.w3.org/2000/svg" height="1em"
                                     viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
@@ -126,7 +126,7 @@
                                         d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
                                 </svg>
                                 &nbsp; &nbsp;
-                                <li class="breadcrumb-item active">Doctors List</li>
+                                <li class="breadcrumb-item active">Appointment List</li>
                             </ul>
                         </div>
                     </div>
@@ -141,13 +141,13 @@
                                     <div class="row align-items-center">
                                         <div class="col">
                                             <div class="doctor-table-blk">
-                                                <h3> Add / Update Doctors List</h3>
+                                                <h3> Add / Update Appointment List</h3>
                                                 <div class="doctor-search-blk">
 
                                                     <div class="add-group">
                                                         <a routerLink="/add-doctor"
-                                                            class="btn btn-primary add-pluss ms-2">
-                                                            <img src="assets/img/icons/plus.svg" alt=""></a>
+                                                            class="btn btn-primary add-pluss ms-2"><img
+                                                                src="assets/img/icons/plus.svg" alt=""></a>
                                                         <a href="javascript:;"
                                                             class="btn btn-primary doctor-refresh ms-2">
                                                             <img src="assets/img/icons/re-fresh.svg" alt=""></a>
@@ -174,8 +174,11 @@
                                                             <th class="sorting_asc" tabindex="0"
                                                                 aria-controls="DataTables_Table_0" rowspan="1"
                                                                 colspan="1" aria-sort="ascending" aria-label="
-                                                                : activate to sort column descending" style="width: 24.9125px;">
-                                                                
+            
+            
+            
+            : activate to sort column descending" style="width: 24.9125px;">
+                                                             
                                                             </th>
                                                             <th class="sorting" tabindex="0"
                                                                 aria-controls="DataTables_Table_0" rowspan="1"
@@ -207,11 +210,11 @@
                                                                 colspan="1"
                                                                 aria-label="Email: activate to sort column ascending"
                                                                 style="width: 146.925px;">Email</th>
-                                                                <th class="sorting" tabindex="0"
+                                                            <th class="sorting" tabindex="0"
                                                                 aria-controls="DataTables_Table_0" rowspan="1"
                                                                 colspan="1"
-                                                                aria-label="Degree: activate to sort column ascending"
-                                                                style="width: 56.8125px;">Gender</th>
+                                                                aria-label="Joining Date: activate to sort column ascending"
+                                                                style="width: 97.6375px;">Joining Date</th>
                                                             <th class="sorting" tabindex="0"
                                                                 aria-controls="DataTables_Table_0" rowspan="1"
                                                                 colspan="1"
@@ -220,20 +223,30 @@
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        <!-- <tr role="row" class="odd"> -->
-                                                            <tr *ngFor="let doctor of doctorList">
-                                                            <td class="sorting_1">
-                                                                <div class="form-check check-tables">
-                                                                    
-                                                                </div>
-                                                            </td>
-                                                            <td>{{doctor.doctName}}</td>
-                                                            <td>{{doctor.department}}</td>
-                                                            <td>{{doctor.specialization}}</td>
-                                                            <td>{{doctor.education}}</td>
-                                                            <td><a href="javascript:;">{{doctor.mobileNo}}</a></td>
-                                                            <td>{{doctor.email}}</td>
-                                                            <td>{{doctor.gender}}</td>
+
+
+
+
+
+
+
+
+                                                 
+                                                            
+                                                        <tr *ngFor="let appointment of appointmentList" class="sorting_1">
+                                                            <div class="form-check check-tables">
+                                                                <input class="form-check-input" type="checkbox"
+                                                                    value="something">
+                                                            </div>
+                                                      
+                                                        <td>{{appointment.fullName}}</td>
+                                                        <td>{{appointment.address}}</td>
+                                                        <td>{{appointment.department}}</td>
+                                                        <td>{{appointment.doctName}}</td>
+                                                        <td><a href="javascript:;">{{appointment.emailId}}</a></td>
+                                                        <td>{{appointment.mobileNo}}</td>
+                                                        <td>{{appointment.patientType}}</td>
+                                                        <td>{{appointment.date}}</td>
                                                             <td class="text-end">
                                                                 <div class="dropdown dropdown-action">
                                                                     <a href="#" class="action-icon dropdown-toggle"

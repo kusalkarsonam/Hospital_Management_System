@@ -96,72 +96,80 @@
             <div class="appointments-form">
                 <h2>Patient information</h2>
 
-                <form>
+                <form (ngSubmit)="addAppointment()">
                     <div class="row">
                         <div class="col-lg-6 col-md-6">
                             <div class="form-group">
                                 <label>YOUR FULL NAME</label>
-                                <input type="text" class="form-control" placeholder="Your Full Name here" fdprocessedid="wmk3h">
+                                <input type="text" class="form-control"
+                                 placeholder="Your Full Name here"  
+                                 [(ngModel)]="appointment.fullName"
+                                 name="appointmentFullName" id="appointmentFullName"
+                                 >
                             </div>
                         </div>
-                        <!-- <div class="col-lg-6 col-md-6">
-                            <div class="form-group">
-                                <label>YOUR LAST NAME</label>
-                                <input type="text" class="form-control" placeholder="Matthews" fdprocessedid="xe2hqm">
-                            </div>
-                        </div> -->
+                       
                         <div class="col-lg-6 col-md-6">
                             <div class="form-group">
                                 <label>ADDRESS</label>
-                                <input type="text" class="form-control" placeholder="your address here" fdprocessedid="r32v97">
+                                <input type="text" class="form-control" 
+                                placeholder="your address here"
+                                [(ngModel)]="appointment.address" 
+                                name="appointmentAddress" id="appointmentAddress">
                             </div>
                         </div>
-                        <!-- <div class="col-lg-6 col-md-6">
-                            <div class="form-group">
-                                <label>ADDRESS LINE 2</label>
-                                <input type="text" class="form-control" placeholder="your address here" fdprocessedid="agzcke">
-                            </div>
-                        </div> -->
+                       
                         <div class="col-lg-6 col-md-6">
                             <div class="form-group">
                                 <label>CHOOSE DOCTOR NAME</label>
-                                <select class="form-select form-control" aria-label="Default select example" fdprocessedid="rzef84v">
-                                    <option selected="">DOCTOR 1</option>
-                                    <option value="1">DOCTOR 2</option>
+                                <select class="form-select form-control" 
+                                aria-label="Default select example" name="doctName"  
+                                [(ngModel)]="appointment.doctName" (change)="readId($event)" >
+                                <option *ngFor="let doctor of doctorList" 
+                                value="{{doctor.doctorId}}">{{doctor.doctName}}</option>
+                                  
                                 </select>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6">
                             <div class="form-group">
                                 <label>SELECT DEPARTMENT</label>
-                                <select class="form-select form-control" aria-label="Default select example" fdprocessedid="4q3qb9">
-                                    <option selected="">Cardiology</option>
-                                    <option value="1">Medicine</option>
-                                    <option value="2">Cardiology</option>
-                                    <option value="3">Surgery</option>
+                                <select class="form-select form-control" 
+                                aria-label="Default select example" name="department"
+                                [(ngModel)]="appointment.department">
+                                    <option *ngFor="let doctor of doctorList" 
+                                    value="{{doctor.department}}">{{doctor.department}}</option>
                                 </select>
                             </div>
-                        </div><div class="col-lg-6 col-md-6">
+                        </div>
+                        <div class="col-lg-6 col-md-6">
                             <div class="form-group">
                                 <label>PATIENT TYPE</label>
-                                <select class="form-select form-control" aria-label="Default select example" fdprocessedid="4q3qb9">
-                                    <option selected="">Regular</option>
-                                    <option value="1">New</option>
-                                    <option value="2">Reference</option>
-                                    <option value="3">Other</option>
+                                <select class="form-select form-control" 
+                                aria-label="Default select example"  
+                                name="patientType"  [(ngModel)]="appointment.patientType">
+                                    <option *ngFor="let patient of patientList" 
+                                    value="{{patient.patientType}}">{{patient.patientType}}</option>
+                                 
                                 </select>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6">
                             <div class="form-group">
                                 <label>EMAIL</label>
-                                <input type="email" class="form-control" placeholder="Sonamk@gmail.com" fdprocessedid="7u6fd">
+                                <input type="email" class="form-control" 
+                                placeholder="Sonamk@gmail.com"
+                                [(ngModel)]="appointment.emailId"
+                                name="appointmentEmailId" id="appointmentEmailId" >
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6">
                             <div class="form-group">
                                 <label>PHONE</label>
-                                <input type="text" class="form-control" placeholder="***********" fdprocessedid="8vhbcp">
+                                <input type="text" class="form-control" 
+                                placeholder=""
+                                [(ngModel)]="appointment.mobileNo"
+                                name="appointmentMobileNo" id="appointmentMobileNo">
                             </div>
                         </div>
                         <!-- <div class="col-lg-6 col-md-6">
@@ -173,15 +181,18 @@
                         <div class="col-lg-6 col-md-6">
                             <div class="form-group">
                                 <label>DATE</label>
-                                <input type="date" min={{currentDate}} class="form-control">
+                                <input type="date" min={{currentDate}} class="form-control"
+                                [(ngModel)]="appointment.date"
+                                name="appointmentDate">
                             </div>
                         </div>
-                        <div class="col-lg-6 col-md-6">
+                        <!-- <div class="col-lg-6 col-md-6">
                             <div class="form-group">
                                 <label>Time</label>
-                                <input type="time" class="form-control">
+                                <input type="time" class="form-control"
+                                [(ngModel)]="appointment.fullName">
                             </div>
-                        </div>
+                        </div> -->
                         <!-- <div class="col-lg-12">
                             <div class="form-group">
                                 <label>APPOINTMENT NOTE</label>
