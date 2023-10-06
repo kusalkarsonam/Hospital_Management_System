@@ -12,12 +12,16 @@ import { Admin } from './Admin';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit{
-  patient: Patient = new Patient("", "", "", "", 0, "","");
+  patient: Patient = new Patient(0,"", "", "", "", 0, "","");
   doctor: Doctor = new Doctor(0, "", "", "", "","","","","");
-  admin: Admin = new Admin("","");
+  admin: Admin = new Admin(0,"","");
   doctorStatus: boolean = false;
   patientStatus: boolean = false;
   adminStatus: boolean = false;
+  doctorid: any;
+  adminid: any;
+  patientid:any;
+
   
    ngOnInit(): void { }
   constructor(private router: Router, private patientService: PatientService) {}
@@ -30,7 +34,8 @@ this.router.navigate(['/app-register']);
     this.patientService.doctor_Login(this.doctor).subscribe(
     (Response:any) =>{
       console.log(Response);
-      sessionStorage.setItem('currentDoctor', Response);
+      this.doctorid = Response.doctorId;
+      localStorage.setItem('currentDoctor',  this.doctorid);
       alert("Login Success!");
       if(Response != null)
       this.router.navigate(['/doctor-dashboard']);
@@ -40,17 +45,27 @@ this.router.navigate(['/app-register']);
     public adminAsLogin() {
       console.log("admin login");
       this.patientService.admin_Login(this.admin).subscribe(
-        (response)  =>{
-        console.log(response);
+        (Response:any)  => {
+        console.log(Response);
+        this.adminid = Response.adminId;
+        console.log("admin as login");
+        console.log(this.adminid);
+        localStorage.setItem('currentAdmin',  this.adminid);
+        if(Response != null){
         alert("Login Success!");
         this.router.navigate(['/admin-dashboard']);
+        }
         }, error => console.log("Something is wrong!"));//error is pre define obj
       }
       public patientAsLogin() {
         console.log("patient login");
         this.patientService.patient_Login(this.patient).subscribe(
-        (Response) =>{
+        (Response:any) => {
           console.log(Response);
+          this.patientid  = Response.patientId;
+          console.log("patient as login");
+          console.log(this.patientid);
+          localStorage.setItem('currentPatient',  this.adminid);
           if(Response != null){
           alert("Login Success!");
           this.router.navigate(['/patient-dashboard']);

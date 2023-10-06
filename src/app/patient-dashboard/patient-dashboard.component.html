@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
     <link rel="shortcut icon" type="image/x-icon" href="/src/assets/img/favicon.png">
-    <title>Preclinic - Medical & Hospital - Bootstrap 5 Admin Template</title>
+    <title>Preclinic - Medical & Hospital</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="/src/assets/css/bootstrap.min.css">
@@ -48,7 +48,7 @@
                     <ul>
                         <li class="menu-title">Main</li>
                         <li class="submenu">
-                            <a routerLink="/admin-dashboard">
+                            <a routerLink="/patient-dashboard">
                                 <span class="menu-side">
                                     <img src="https://preclinic.dreamguystech.com/template/assets/img/icons/menu-icon-01.svg"
                                         alt>
@@ -60,10 +60,10 @@
                            
                         </li>
                         <li class="submenu">
-                            <a routerLink="/doctor-list-dash"><span class="menu-side">
+                            <a routerLink="/patient-doctor-list"><span class="menu-side">
                                     <img src="https://preclinic.dreamguystech.com/template/assets/img/icons/menu-icon-02.svg"
                                         alt>
-                                </span> <span style="font-weight: bolder; color: #2e37a4;"> Doctors </span>
+                                </span> <span style="font-weight: bolder; color: #2e37a4;"> Doctors list </span>
                             </a>
                             
                         </li>
@@ -133,13 +133,14 @@
                         <div class="col-md-6">
                             <div class="morning-user">
                                 <h2>Welcome <span>Patient</span></h2>
-                                <h2>Hello, <span>.</span></h2>
+                                <h2>Hello, <span>{{patient.fullName}}</span></h2>
                                 <p style="font-size: 15px; font-weight: 700;">Have a nice day at work</p>
                             </div>
                         </div>
                         <div class="col-md-6 position-blk">
                             <div class="morning-img">
-                                <img src="assets/img/morning-img-01.png" alt>
+                                <img src="https://www.genamet.com/media/1527/img2.jpg?format=webp"
+                                style="width: 90%;" alt>
                             </div>
                         </div>
                     </div>

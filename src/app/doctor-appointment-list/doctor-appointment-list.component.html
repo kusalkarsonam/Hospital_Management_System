@@ -33,9 +33,10 @@
                         alt> <span>Chikitsaalay</span>
                 </a>
             </div>
-            <a id="toggle_btn" href="javascript:void(0);"><img src="/src/assets/img/icons/bar-icon.svg" alt></a>
-            <a id="mobile_btn" class="mobile_btn float-start" href="#sidebar"><img
-                    src="/src/assets/img/icons/bar-icon.svg" alt></a>
+            <!-- <a id="toggle_btn" href="javascript:void(0);"><img src="/src/assets/img/icons/bar-icon.svg" alt></a> -->
+            <a id="mobile_btn" class="mobile_btn float-start" href="#sidebar">
+                <!-- <img src="/src/assets/img/icons/bar-icon.svg" alt> -->
+                </a>
             <div class="top-nav-search mob-view">
 
             </div>
@@ -48,7 +49,7 @@
                     <ul>
                         <li class="menu-title">Main</li>
                         <li class="submenu">
-                            <a routerLink="/admin-dashboard">
+                            <a routerLink="/doctor-dashboard">
                                 <span class="menu-side">
                                     <img src="https://preclinic.dreamguystech.com/template/assets/img/icons/menu-icon-01.svg"
                                         alt>
@@ -59,52 +60,22 @@
                             </a>
 
                         </li>
-                        <!-- <li class="submenu">
-                            <a routerLink="/doctor-list-dash"><span class="menu-side">
-                                    <img src="https://preclinic.dreamguystech.com/template/assets/img/icons/menu-icon-02.svg"
-                                        alt>
-                                </span> <span style="font-weight: bolder; color: #2e37a4;"> Doctors </span>
-                            </a>
-
-                        </li> -->
-                        <!-- <li class="submenu">
-                            <a routerLink="/patient-list-dash"><span class="menu-side"><img
-                                        src="https://preclinic.dreamguystech.com/template/assets/img/icons/menu-icon-03.svg"
-                                        alt></span>
-                                <span style="font-weight: bolder; color: #2e37a4;">Patients </span> </a>
-                            <ul style="display: none;">
-                                <li><a href="patients.html">Patients List</a></li>
-                                <li><a href="add-patient.html">Add Patients</a></li>
-                                <li><a href="edit-patient.html">Edit Patients</a></li>
-                                <li><a href="patient-profile.html">Patients Profile</a></li>
-                            </ul>
-                        </li> -->
+                    
 
                         <li class="submenu">
-                            <a routerLink="/appointment-list-dash"><span class="menu-side"><img
+                            <a routerLink="/doctor-appointment-list"><span class="menu-side"><img
                                         src="https://preclinic.dreamguystech.com/template/assets/img/icons/menu-icon-04.svg"
                                         alt></span>
                                 <span style="font-weight: bolder; color: #2e37a4;"> Appointments </span>
                             </a>
-                            <ul style="display: none;">
-                                <li><a href="appointments.html">Appointment List</a></li>
-                                <li><a href="add-appointment.html">Book Appointment</a></li>
-                                <li><a href="edit-appointment.html">Edit Appointment</a></li>
-                            </ul>
+                         
                         </li>
-                        <!-- <li class="submenu">
-<a href="#"><span class="menu-side"><img src="https://preclinic.dreamguystech.com/template/assets/img/icons/menu-icon-05.svg" alt></span> <span> Doctor Schedule </span> <span class="menu-arrow"></span></a>
-<ul style="display: none;">
-<li><a href="schedule.html">Schedule List</a></li>
-<li><a href="add-schedule.html">Add Schedule</a></li>
-<li><a href="edit-schedule.html">Edit Schedule</a></li>
-</ul>
-</li> -->
+
 
 
                     </ul>
                     <div class="logout-btn">
-                        <a (click)="logout()"><span class="menu-side"><img
+                        <a ><span class="menu-side"><img
                                     src="https://preclinic.dreamguystech.com/template/assets/img/icons/logout.svg"
                                     alt></span> <span>Logout</span></a>
                     </div>
@@ -247,6 +218,13 @@
                                                         <td>{{appointment.mobileNo}}</td>
                                                         <td>{{appointment.patientType}}</td>
                                                         <td>{{appointment.date}}</td>
+
+
+
+                                                        <td><button type="button" class="btn btn-danger"
+                                                            (click)="deleteAppointmentList(appointment.appointmentId)">Delete</button></td>
+
+
                                                             <td class="text-end">
                                                                 <div class="dropdown dropdown-action">
                                                                     <a href="#" class="action-icon dropdown-toggle"
@@ -278,30 +256,7 @@
                                                 </table>
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-sm-12 col-md-5">
-                                                <div class="dataTables_info" id="DataTables_Table_0_info" role="status"
-                                                    aria-live="polite">Showing 1 to 8 of 8 entries</div>
-                                            </div>
-                                            <div class="col-sm-12 col-md-7">
-                                                <div class="dataTables_paginate paging_simple_numbers"
-                                                    id="DataTables_Table_0_paginate">
-                                                    <ul class="pagination">
-                                                        <li class="paginate_button page-item previous disabled"
-                                                            id="DataTables_Table_0_previous"><a href="#"
-                                                                aria-controls="DataTables_Table_0" data-dt-idx="0"
-                                                                tabindex="0" class="page-link">Previous</a></li>
-                                                        <li class="paginate_button page-item active"><a href="#"
-                                                                aria-controls="DataTables_Table_0" data-dt-idx="1"
-                                                                tabindex="0" class="page-link">1</a></li>
-                                                        <li class="paginate_button page-item next disabled"
-                                                            id="DataTables_Table_0_next"><a href="#"
-                                                                aria-controls="DataTables_Table_0" data-dt-idx="2"
-                                                                tabindex="0" class="page-link">Next</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        
                                     </div>
                                 </div>
                             </div>

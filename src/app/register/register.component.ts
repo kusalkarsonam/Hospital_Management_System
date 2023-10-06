@@ -11,7 +11,7 @@ import { throwError } from 'rxjs';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-  patient: Patient = new Patient("", "", "", "", 0, "","");
+  patient: Patient = new Patient(0,"", "", "", "", 0, "","");
 
 
   ngOnInit(): void { }

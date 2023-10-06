@@ -965,7 +965,7 @@ textarea.form-control {
 	background-color: #faa937;
 }
 .top-nav-search {
-    /* float: left; */
+    float: left;
     margin-left: 22px;
 }
 .top-nav-search form {

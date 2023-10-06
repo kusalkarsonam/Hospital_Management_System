@@ -48,13 +48,13 @@
                     <ul>
                         <li class="menu-title">Main</li>
                         <li class="submenu">
-                            <a routerLink="/admin-dashboard">
+                            <a routerLink="/patient-dashboard">
                                 <span class="menu-side">
                                     <img src="https://preclinic.dreamguystech.com/template/assets/img/icons/menu-icon-01.svg"
                                         alt>
                                 </span>
                                 <span style="font-weight: bolder; color: #2e37a4;">
-                                    Admin Dashboard
+                                    Patient Dashboard
                                 </span>
                             </a>
 
@@ -63,11 +63,11 @@
                             <a routerLink="/doctor-list-dash"><span class="menu-side">
                                     <img src="https://preclinic.dreamguystech.com/template/assets/img/icons/menu-icon-02.svg"
                                         alt>
-                                </span> <span style="font-weight: bolder; color: #2e37a4;"> Doctors </span>
+                                </span> <span style="font-weight: bolder; color: #2e37a4;"> Doctors list</span>
                             </a>
 
                         </li>
-                        <li class="submenu">
+                        <!-- <li class="submenu">
                             <a routerLink="/patient-list-dash"><span class="menu-side"><img
                                         src="https://preclinic.dreamguystech.com/template/assets/img/icons/menu-icon-03.svg"
                                         alt></span>
@@ -78,9 +78,9 @@
                                 <li><a href="edit-patient.html">Edit Patients</a></li>
                                 <li><a href="patient-profile.html">Patients Profile</a></li>
                             </ul>
-                        </li>
+                        </li> -->
 
-                        <li class="submenu">
+                        <!-- <li class="submenu">
                             <a routerLink="/appointment-list-dash"><span class="menu-side"><img
                                         src="https://preclinic.dreamguystech.com/template/assets/img/icons/menu-icon-04.svg"
                                         alt></span>
@@ -91,7 +91,7 @@
                                 <li><a href="add-appointment.html">Book Appointment</a></li>
                                 <li><a href="edit-appointment.html">Edit Appointment</a></li>
                             </ul>
-                        </li>
+                        </li> -->
                         <!-- <li class="submenu">
 <a href="#"><span class="menu-side"><img src="https://preclinic.dreamguystech.com/template/assets/img/icons/menu-icon-05.svg" alt></span> <span> Doctor Schedule </span> <span class="menu-arrow"></span></a>
 <ul style="display: none;">
@@ -118,14 +118,15 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <ul class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="doctors.html">Patient </a></li> &nbsp; &nbsp;
+                                <li class="breadcrumb-item"><a href="doctors.html">Doctors </a></li>
+                                &nbsp; &nbsp;
                                 <svg xmlns="http://www.w3.org/2000/svg" height="1em"
                                     viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                                     <path
                                         d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
                                 </svg>
                                 &nbsp; &nbsp;
-                                <li class="breadcrumb-item active">Patient List</li>
+                                <li class="breadcrumb-item active">Doctors List</li>
                             </ul>
                         </div>
                     </div>
@@ -136,12 +137,32 @@
                         <div class="card card-table show-entire">
                             <div class="card-body">
 
-                                
+                                <!-- <div class="page-table-header mb-2">
+                                    <div class="row align-items-center">
+                                        <div class="col">
+                                            <div class="doctor-table-blk">
+                                                <h3> Add / Update Doctors List</h3>
+                                                <div class="doctor-search-blk">
+
+                                                    <div class="add-group">
+                                                        <a routerLink="/add-doctor"
+                                                            class="btn btn-primary add-pluss ms-2">
+                                                            <img src="assets/img/icons/plus.svg" alt=""></a>
+                                                        <a href="javascript:;"
+                                                            class="btn btn-primary doctor-refresh ms-2">
+                                                            <img src="assets/img/icons/re-fresh.svg" alt=""></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div> -->
 
                                 <div class="table-responsive">
                                     <div id="DataTables_Table_0_wrapper"
                                         class="dataTables_wrapper dt-bootstrap4 no-footer">
-                                      
+                                       
                                         <div class="row">
                                             <div class="col-sm-12">
                                                 <table
@@ -152,8 +173,9 @@
                                                         <tr role="row">
                                                             <th class="sorting_asc" tabindex="0"
                                                                 aria-controls="DataTables_Table_0" rowspan="1"
-                                                                colspan="1" aria-sort="ascending" aria-label=": activate to sort column descending" style="width: 24.9125px;">
-                                                              
+                                                                colspan="1" aria-sort="ascending" aria-label="
+                                                                : activate to sort column descending" style="width: 24.9125px;">
+                                                                
                                                             </th>
                                                             <th class="sorting" tabindex="0"
                                                                 aria-controls="DataTables_Table_0" rowspan="1"
@@ -164,66 +186,56 @@
                                                                 aria-controls="DataTables_Table_0" rowspan="1"
                                                                 colspan="1"
                                                                 aria-label="Department: activate to sort column ascending"
-                                                                style="width: 102.912px;">Email Id</th>
+                                                                style="width: 102.912px;">Department</th>
                                                             <th class="sorting" tabindex="0"
                                                                 aria-controls="DataTables_Table_0" rowspan="1"
                                                                 colspan="1"
                                                                 aria-label="Specialization: activate to sort column ascending"
-                                                                style="width: 108.637px;">Mobile No.</th>
+                                                                style="width: 108.637px;">Specialization</th>
                                                             <th class="sorting" tabindex="0"
                                                                 aria-controls="DataTables_Table_0" rowspan="1"
                                                                 colspan="1"
                                                                 aria-label="Degree: activate to sort column ascending"
-                                                                style="width: 56.8125px;">Patient Type</th>
+                                                                style="width: 56.8125px;">Degree</th>
                                                             <th class="sorting" tabindex="0"
                                                                 aria-controls="DataTables_Table_0" rowspan="1"
                                                                 colspan="1"
                                                                 aria-label="Mobile: activate to sort column ascending"
-                                                                style="width: 84.6375px;">Gender</th>
+                                                                style="width: 84.6375px;">Mobile</th>
                                                             <th class="sorting" tabindex="0"
                                                                 aria-controls="DataTables_Table_0" rowspan="1"
                                                                 colspan="1"
                                                                 aria-label="Email: activate to sort column ascending"
-                                                                style="width: 146.925px;">Age</th>
-                                                       
+                                                                style="width: 146.925px;">Email</th>
+                                                                <th class="sorting" tabindex="0"
+                                                                aria-controls="DataTables_Table_0" rowspan="1"
+                                                                colspan="1"
+                                                                aria-label="Degree: activate to sort column ascending"
+                                                                style="width: 56.8125px;">Gender</th>
                                                             <th class="sorting" tabindex="0"
                                                                 aria-controls="DataTables_Table_0" rowspan="1"
-                                                                colspan="2"
+                                                                colspan="1"
                                                                 aria-label=": activate to sort column ascending"
-                                                                style="width: 19.675px;  text-align:center;">Action</th>
+                                                                style="width: 19.675px;"></th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-
-
-
-
-
-
-
-
-
-                                                        <tr *ngFor="let patient of patientList" class="sorting_1">
-                                                            <div class="form-check check-tables">
-                                                                <input class="form-check-input" type="checkbox"
-                                                                    value="something">
-                                                            </div>
-
-                                                            <td>{{patient.fullName}}</td>
-                                                            <td><a href="javascript:;">{{patient.emailId}}</a></td>
-                                                            <td>{{patient.mobileNo}}</td>
-                                                            <td>{{patient.patientType}}</td>
-                                                            <td>{{patient.gender}}</td>
-                                                            <td>{{patient.age}}</td>
-
-
-                                                            <td><button type="button" class="btn btn-outline-success"
-                                                                (click)="updatePatientlist(patient.patientId)"
-                                                                style="margin-left: 30px;">Update</button>
+                                                        <!-- <tr role="row" class="odd"> -->
+                                                            <tr *ngFor="let doctor of doctorList">
+                                                            <td class="sorting_1">
+                                                                <div class="form-check check-tables">
+                                                                    
+                                                                </div>
                                                             </td>
-                                                            <td><button type="button" class="btn btn-danger"
-                                                                (click)="deletePatientList(patient.patientId)">Delete</button></td>
-
+                                                            <td>{{doctor.doctName}}</td>
+                                                            <td>{{doctor.department}}</td>
+                                                            <td>{{doctor.specialization}}</td>
+                                                            <td>{{doctor.education}}</td>
+                                                            <td><a href="javascript:;">{{doctor.mobileNo}}</a></td>
+                                                            <td>{{doctor.email}}</td>
+                                                            <td>{{doctor.gender}}</td>
+                                                            
+                                                       
 
 
 
@@ -232,7 +244,32 @@
                                                 </table>
                                             </div>
                                         </div>
-                                        
+                                        <!-- pagination code starts -->
+                                        <!-- <div class="row">
+                                            <div class="col-sm-12 col-md-5">
+                                                <div class="dataTables_info" id="DataTables_Table_0_info" role="status"
+                                                    aria-live="polite">Showing 1 to 8 of 8 entries</div>
+                                            </div>
+                                            <div class="col-sm-12 col-md-7">
+                                                <div class="dataTables_paginate paging_simple_numbers"
+                                                    id="DataTables_Table_0_paginate">
+                                                    <ul class="pagination">
+                                                        <li class="paginate_button page-item previous disabled"
+                                                            id="DataTables_Table_0_previous"><a href="#"
+                                                                aria-controls="DataTables_Table_0" data-dt-idx="0"
+                                                                tabindex="0" class="page-link">Previous</a></li>
+                                                        <li class="paginate_button page-item active"><a href="#"
+                                                                aria-controls="DataTables_Table_0" data-dt-idx="1"
+                                                                tabindex="0" class="page-link">1</a></li>
+                                                        <li class="paginate_button page-item next disabled"
+                                                            id="DataTables_Table_0_next"><a href="#"
+                                                                aria-controls="DataTables_Table_0" data-dt-idx="2"
+                                                                tabindex="0" class="page-link">Next</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div> -->
+                                         <!-- pagination code ends -->
                                     </div>
                                 </div>
                             </div>

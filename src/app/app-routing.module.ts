@@ -14,6 +14,14 @@ import { AddDoctorComponent } from './add-doctor/add-doctor.component';
 import { PatientDashboardComponent } from './patient-dashboard/patient-dashboard.component';
 import { DoctorDashboardComponent } from './doctor-dashboard/doctor-dashboard.component';
 import { DoctorAppointmentListComponent } from './doctor-appointment-list/doctor-appointment-list.component';
+import { PatientDoctorListComponent } from './patient-doctor-list/patient-doctor-list.component';
+import { UpdateDoctorListComponent } from './update-doctor-list/update-doctor-list.component';
+import { DoctorProfileComponent } from './doctor-profile/doctor-profile.component';
+import { AdminProfileComponent } from './admin-profile/admin-profile.component';
+import { UpdatePatientListComponent } from './update-patient-list/update-patient-list.component';
+import { UpdateAppointmentListComponent } from './update-appointment-list/update-appointment-list.component';
+
+
 
 const routes: Routes = [ 
 { path : ''  ,  component :HomeComponent},
@@ -30,7 +38,13 @@ const routes: Routes = [
 {path: 'patient-list-dash', component:PatientListDashComponent},
 {path: 'appointment-list-dash', component:AppointmentListDashComponent},
 {path: 'add-doctor', component:AddDoctorComponent},
-{path: 'doctor-appointment-list', component:DoctorAppointmentListComponent}
+{path: 'doctor-appointment-list', component:DoctorAppointmentListComponent},
+{path: 'patient-doctor-list', component:PatientDoctorListComponent},
+{path: 'update-doctor-list/:doctorId', component:UpdateDoctorListComponent},
+{path: 'doctorprofile', component:DoctorProfileComponent},
+{path: 'admin-profile', component:AdminProfileComponent},
+{path: 'update-patient-list/:patientId', component:UpdatePatientListComponent},
+{path: 'update-appointment-list/:appointmentId', component:UpdateAppointmentListComponent}
 ];
 
 @NgModule({

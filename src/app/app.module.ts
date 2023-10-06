@@ -20,6 +20,12 @@ import { PatientListDashComponent } from './patient-list-dash/patient-list-dash.
 import { AppointmentListDashComponent } from './appointment-list-dash/appointment-list-dash.component';
 import { AddDoctorComponent } from './add-doctor/add-doctor.component';
 import { DoctorAppointmentListComponent } from './doctor-appointment-list/doctor-appointment-list.component';
+import { PatientDoctorListComponent } from './patient-doctor-list/patient-doctor-list.component';
+import { UpdateDoctorListComponent } from './update-doctor-list/update-doctor-list.component';
+import { DoctorProfileComponent } from './doctor-profile/doctor-profile.component';
+import { UpdatePatientListComponent } from './update-patient-list/update-patient-list.component';
+import { UpdateAppointmentListComponent } from './update-appointment-list/update-appointment-list.component';
+import { PatientProfileComponent } from './patient-profile/patient-profile.component';
 
 
 @NgModule({
@@ -38,7 +44,14 @@ import { DoctorAppointmentListComponent } from './doctor-appointment-list/doctor
     PatientListDashComponent,
     AppointmentListDashComponent,
     AddDoctorComponent,
-    DoctorAppointmentListComponent
+    DoctorAppointmentListComponent,
+    PatientDoctorListComponent,
+    UpdateDoctorListComponent,
+    DoctorProfileComponent,
+    UpdatePatientListComponent,
+    UpdateAppointmentListComponent,
+    PatientProfileComponent
+
  
   ],
   imports: [
